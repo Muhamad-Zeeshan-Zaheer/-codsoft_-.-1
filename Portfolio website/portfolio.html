@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Muhammad Zeeshan Zaheer</title>
+
+    <link rel="stylesheet" href="portfolio.css" />
+
+    <script
+      src="https://kit.fontawesome.com/d43c8925be.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div id="Home" class="p1">
+      <nav>
+        <img src="images/logo.png" id="logo" alt="logo" />
+
+        <ul id="smenu">
+          <li><a href="#Home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#resume">Resume</a></li>
+          <i
+            class="fas fa-times"
+            style="color: white"
+            onclick="closemenu()"
+          ></i>
+        </ul>
+        <i
+          class="fas fa-bars fa-2xs"
+          style="color: purple"
+          onclick="openmenu()"
+        ></i>
+      </nav>
+      <div class="header">
+        <h1>Muhammad Zeeshan Zaheer</h1>
+        <p id="hp">Front end developer using HTML,CSS and JAVA Script</p>
+      </div>
+    </div>
+    <!--About -->
+    <div id="about">
+      <div class="container">
+        <div class="row">
+          <div class="about-col-1">
+            <img src="images/me.JPG" alt="Zeeshan" />
+          </div>
+          <div class="about-col-2">
+            <h1 class="sub-title"><span id="about">About Me</span></h1>
+            <p>
+              My Self Muhammad Zeeshan Zaheer. I am form Lahore. My interest and
+              expertise are in UI/UX/development / programming. I am very fast
+              learner and love to learn new technologies in the field. Seeking
+              to find a role where I can pursue my career and passion
+            </p>
+            <div class="tab-titles">
+              <p class="tab-links active" onclick="opentab('Education')">
+                Education
+              </p>
+              <p class="tab-links" onclick="opentab('Experience')">
+                Experience
+              </p>
+            </div>
+            <div class="tab-contents t-active" id="Education">
+              <b>Education</b>
+              <ul>
+                <li>
+                  <span>Matric</span><br />
+                  Passing Year:2016<br /><b>Marks:755/1100</b>
+                </li>
+
+                <li>
+                  <span>ICS</span><br />
+                  Passing Year:2018<br /><b>Marks:733/1100</b>
+                </li>
+
+                <li>
+                  <span>BSCS</span><br />
+                  Passing Year:2023<br /><b>CGPA:2.65/4</b>
+                </li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="Experience">
+              <b>Experience</b>
+              <ul>
+                <li>I am Fresher and now i am doing internship in Cod Soft</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Skills  -->
+    <div id="skills">
+      <div class="container">
+        <h1 class="sub-title">
+          <h1>Skills</h1>
+          <div class="skill-list">
+            <div>
+              <br />
+              <i class="fa-brands fa-html5 fa-lg" style="color: #e34f26"></i>
+              <h4><br />HTML</h4>
+              <p><br />I can provide the HTML 5 services</p>
+            </div>
+
+            <div>
+              <i class="fa-brands fa-css3" style="color: #1572b6"></i>
+              <h4>CSS 3</h4>
+              <p><br />I can provide the CSS 3 services</p>
+            </div>
+
+            <div>
+              <br />
+              <i class="fa-brands fa-js fa-lg" style="color: #f7df1e"></i>
+              <h4><br />JAVASCRIPT</h4>
+              <p>
+                <br />
+                I can provide the JAVASCRIPT services
+              </p>
+            </div>
+          </div>
+        </h1>
+        <a href="" id="toogle " class="btn">See More</a>
+      </div>
+    </div>
+
+    <!-- Contact -->
+    <div id="contact">
+      <h1 class="sub-title">Contact Me</h1>
+      <h4>Email</h4>
+      <p>shan6818@gmail.com</p>
+      <h4>Phone No#:</h4>
+      <p>+92304-4247527</p>
+      <div class="social-icons">
+        <a
+          href="https://www.facebook.com/profile.php?id=100018029886303&mibextid=ZbWKwL"
+          ><i class="fab fa-facebook" style="color: #1879f2"></i
+        ></a>
+        <a href="https://www.linkedin.com/in/muhammad-zeeshan-zaheer-460921262/"
+          ><i class="fab fa-linkedin" style="color: #0077b5"></i
+        ></a>
+      </div>
+    </div>
+
+    <!-- Resume  -->
+
+    <div id="resume">
+      <h1>Resume</h1>
+      <p>here is my resume available</p>
+      <h4>Click on the download button to download it</h4>
+      <a href="images/Zeeshan's Resume.pdf" download class="btn">Download CV</a>
+    </div>
+
+    <footer class="footer">
+      <p>
+        Designed by Muhammad Zeeshan Zaheer front end Web intern in Cod Soft
+      </p>
+    </footer>
+
+    <script>
+      var tablinks = document.getElementsByClassName("tab-links");
+      var tabcontents = document.getElementsByClassName("tab-contents");
+      function opentab(tabname) {
+        // for removal of existing link data
+        for (tablink of tablinks) {
+          tablink.classList.remove("active");
+        }
+        for (tabcontent of tabcontents) {
+          tabcontent.classList.remove("t-active");
+        }
+        // for displaying the color line
+        event.currentTarget.classList.add("active");
+        // this will show the active tab
+        document.getElementById(tabname).classList.add("t-active");
+      }
+
+      var s = document.getElementById("smenu");
+      function openmenu() {
+        s.style.right = "0";
+      }
+      function closemenu() {
+        s.style.right = "-200px";
+      }
+    </script>
+  </body>
+</html>

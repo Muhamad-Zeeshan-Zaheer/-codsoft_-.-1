@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Landing page.css" />
+    <title>Document</title>
+    <script
+      src="https://kit.fontawesome.com/d43c8925be.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <p class="links">
+        <a id="fb" href="https://www.facebook.com/" target="_blank"
+          ><i class="fa-brands fa-facebook fa-2xs"></i
+        ></a>
+        <a href="https://youtube.com/" target="_blank"
+          ><i class="fa-brands fa-youtube fa-2xs" style="color: #ff0000"></i
+        ></a>
+        <a href="https://www.linkedin.com/feed/" target="_blank"
+          ><i class="fa-brands fa-linkedin fa-2xs" style="color: #0077b5"></i
+        ></a>
+      </p>
+
+      <p>
+        <i class="fa-solid fa-phone fa-2xs" style="color: #ffffff"></i> &nbsp;
+        +923044247527
+      </p>
+
+      <p id="p1">
+        <i class="fa-solid fa-envelope" style="color: #ffffff"></i>
+        shan6818@gmail.com
+      </p>
+      <button>request a consultant</button>
+    </div>
+    <div class="container1">
+      <nav>
+        <h1>Landing Page</h1>
+        <ul id="smenu">
+          <li>Home</li>
+          <li>Blog</li>
+          <li>Page</li>
+          <li>Services</li>
+          <li>Contact</li>
+          <li>Buy Now</li>
+          <i
+            class="fas fa-times"
+            style="color: white"
+            onclick="closemenu()"
+          ></i>
+        </ul>
+        <i
+          class="fas fa-bars fa-2xs"
+          style="color: purple"
+          onclick="openmenu()"
+        ></i>
+      </nav>
+      <div class="image-container">
+        <img src="images/background.png" alt="image" />
+      </div>
+    </div>
+    <div class="container3">
+      <div class="row">
+        <h2>Launch Bussiness</h2>
+        <h2>Online Support Team</h2>
+        <h2>Time Management</h2>
+      </div>
+
+      <div class="row">
+        <p>Dummy text</p>
+        <p>Dummy text</p>
+        <p>Dummy text</p>
+      </div>
+    </div>
+
+    <script>
+      var s = document.getElementById("smenu");
+      function openmenu() {
+        s.style.right = "0";
+      }
+      function closemenu() {
+        s.style.right = "-200px";
+      }
+    </script>
+  </body>
+</html>
